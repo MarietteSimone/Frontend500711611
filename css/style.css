@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color:  #685c54;
+    padding:5px 0px; 
+    color: #fff;
+    border-bottom: 1px white solid;
+}
+.header_logo {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    position: relative;
+    color: white;
+    top: auto;
+    left: auto;
+    padding: 0px 10px;
+    padding: 0px 10px;
+    margin: 0;
+    height: 30px;
+    transform: none;
+}
+.header_logo:hover {
+    font-weight: 500;
+    cursor:pointer;
+    color: white;
+}
+.header_logo > img {
+        max-width: 83px;
+    max-height: 33px;
+}
+.header_logo > i {
+    padding-right: 5px;
+    font-size: 19px;
+}
+.right {
+    float: right;
+}
+.zoeken {
+    width: 500px;
+    float: right;
+    text-align: right;
+}
+#zoeken {
+  width: 60px;
+  text-align: right;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  background-color: #685c54;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#zoeken:focus {
+  width: 85%;
+  margin-right: 0px;
+  color:white;
+  border-bottom: 1px orange solid;
+}
+#zoeken::placeholder {
+    color: white;
+}
+
+
+/*MENU OVERLAY*/
+
+.overlay {
+  margin-top: 64px;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+/* comments */
+.picture {
+    float: left;
+    line-height: 158px;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+#NieuwComment {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 150px;
+    border: solid 1px lightgrey;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.navbox {
+    padding-top: 20px;
+    padding-right: 50px;
+    width: 20%
+}
+
+.navimg{
+    max-width: 140px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #675c53;
+    vertical-align: bottom;
+    line-height: 1;
+    font-size: 0;
+}
+.navbox > ul {
+    list-style: none;
+}
+.navbox > ul > li > a {
+    font-size: 14px;
+    font-size: 1.3rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    padding: 0;
+    color: #54a5dd;
+    width: 90%;
+}.navbox > ul > li > a:hover {
+    text-decoration: underline;
+    color: #3c8bc1;
+    cursor: pointer;
+}
+.navbox > ul > li:first-child > a{
+    margin: 0 0 0px;
+    width: 90%;
+    padding: 0;
+    color: #000;
+    font-size: 20px;
+    font-size: 1.4rem;
+    line-height: 30px;
+    line-height: 2.2rem;
+    font-weight: 600;
+}
+.navbtn > ul > li:first-child > a.btn.btn-warning, a.btn.btn-warning, a.btn.btn-warning:hover{
+    background-color: #685c54;
+    border: 0;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    margin: 5px 0px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.fas.fa-plus, .fas.fa-minus {
+    display: none;
+}
+a.btn-primary {
+    background-color: #685c54;
+    border: 0;
+    border-radius: 10px;
+    color: white!important;
+    margin: 5px 0px;
+    font-size: 20px;
+    font-weight: 200;
+}
+a.btn-primary:hover {
+    background-color: #785c54;
+    border: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    margin: 5px 0px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.contactSmal {
+    display: none;
+}
+/* nav phone*/
+@media (max-width:  992px) { 
+    .header_logo > span  {
+       visibility: hidden;
+    }
+    .zoeken {
+        width: 360px;
+    }
+    .navbox {
+        width: 100%;
+    }
+    .navbox > ul {
+        
+        background-color: white;
+    }
+    .navbox > ul > li > a{
+        background-color: white;
+        display: none;
+    }
+    .navbox > ul > li:first-child > a {
+        display: block;
+    }
+    .navimg {
+        display: none;
+    }
+    .showbar > ul > li > a {
+        background-color: white;
+        display: block;
+    }
+     
+    .navbtn > ul > li > a {
+        display: block;
+        color: white;
+    }
+    .fas.fa-plus, .fas.fa-minus {
+    display: inline-block;
+}
+}
+@media (max-width:  770px) { 
+    #NieuwComment {
+        margin-left: 0;
+    }
+    .zoeken {
+        width: 100%;
+    }
+    .actueel {
+        display:none;
+    }
+    .verhalen > h2 {
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 5px;
+    }
+    .verhalen > h2 > a {
+        border-bottom: 3px solid #fdd823;
+        padding-bottom: 4px;
+    }
+    .contactSmal {
+        display: block;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px lightgrey;
+        padding: 5px;
+    }
+    .contactSmal > p {
+        padding-left: 45px;
+    }
+    .contactSmal > b {
+        font-size: 15px;
+    }
+    .contactSmal > i {
+        font-size: 20px;
+        padding: 10px
+    }
+    
+    .contact {
+    display: none;
+    }
+    .verhalen {
+        order: 2;
+    }
+    .sidebox {
+        order: 1;
+    }
+}
+/* BREADCRUMS*/
+.breadcrumb {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size:14px;
+    background-color: #685c54!important;
+    color: white;
+    margin-bottom: 0px!important;
+    padding: 1px!important;
+    border-radius: 0!important;
+}
+.breadcrumb > .container > a {
+    color: white;
+}
+.content {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+}
+.jumbotron {
+    background-color:  #fdd823!important;
+    color: black;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 0px!important;
+    z-index: 1!important;
+}
+.verhalen {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    background-color: white;
+    z-index: 4;
+    text-align: center;
+}
+
+/* linker border en onder boven*/
+.verhalen:before {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 4px 12px 0 rgba(103,92,83,.26);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.verhaal {
+    text-align: left;
+}
+.actueel {
+     text-decoration: line-through;
+     color: lightgrey;
+}
+
+/* Side box*/
+
+.sidebox{
+    z-index: 3;
+}
+.sidebox::before {
+    content: "";
+    box-sizing: inherit;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    
+    top: -20px;
+    right: 0;
+    width: 299%;
+    bottom: 0;
+    z-index: -1;
+    background-color: #f7f7f6;
+        display: block;
+    margin-bottom: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.sort> tr > td {
+    border-bottom: solid 1px black;
+    width: 200px;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.column {
+  padding:20px 10px;
+    float: left;
+  width: 100%;
+  display: none; /* verstopt columns  */
+    text-align: left;
+}
+
+.img > img {
+    border-radius: 5px;
+	box-shadow: 0 0 5px #333;
+			
+}
+.category {
+    color:  #fdd823;
+    
+}
+.datum {
+    float:right;
+}
+.titel {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.schrijver{
+   font-size: 12px; 
+    margin-top: 0;
+    padding-top: 0;
+}
+.vieuws {
+    
+}
+.reacties {
+    float: right;
+}
+.leesmeer {
+    text-decoration: underline;
+}
+
+.show {
+    display: block;
+}
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+
+/* likes / Bookmark */
+.fa-heart {
+    color: black;
+}
+.fa-heart:hover{
+    
+    cursor: pointer;
+}
+.fa-bookmark:hover {
+    cursor: pointer;
+}
+
+.sidebox.favi {
+    text-align: center;
+    color: gray;
+}
+.sidebox.favi > span {
+    font-size: 13px;
+    
+    
+}
+
+
+/* POP up style*/
+.POPoverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+    z-index: 5;
+}
+.POPoverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.popup > h2 {
+    text-align: center;
+}
+.popup > h2 > img {
+    height: 71px;
+}
+.tab {
+    text-align: center;
+    border-bottom: 1px lightgrey solid;
+    cursor: pointer;
+    font-size: 20px;
+}
+    .tab > a {
+        margin-left: 10px;
+        padding-bottom: 3px;
+    }
+
+.tab > a.active {
+    border-bottom:solid 2px #ffc107;
+}
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+
